@@ -1,5 +1,7 @@
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Header from "./components/Header";
+import { CssBaseline } from "@mui/material";
 
 function App() {
   const darkTheme = createTheme({
@@ -9,7 +11,10 @@ function App() {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-      <div className="App">Hello World</div>;
+      <CssBaseline />
+      <div>
+        <Header />
+      </div>
     </ThemeProvider>
   );
 }
